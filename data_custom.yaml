@@ -1,0 +1,7 @@
+train: ./data/train
+
+val: ./data/val
+
+nc: 3
+
+names: ["mug", "bottle", "bag"]

@@ -146,6 +146,11 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# Exlude the following files and directories from version control
+runs/
+train/
+val/
+
 # mypy
 .mypy_cache/
 .dmypy.json
