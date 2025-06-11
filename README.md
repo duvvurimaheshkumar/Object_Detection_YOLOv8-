@@ -32,10 +32,10 @@ This project provides an interactive Python script to train multiple YOLO (You O
    ```
 
 2. **Follow the prompts:**
-   - **Select YOLO models:**  
-   - **Enter epochs:**  
-   - **Enter image sizes:**  
-   - **Continue or stop:**  
+   - **1. Select YOLO models**  
+   - **2. Enter epochs**  
+   - **3. Enter image sizes**  
+   - **4. Continue or stop:**  
      After each training run, you can choose to continue with the next parameter combination or stop.
 
 3. **Training Output:**  
@@ -52,43 +52,6 @@ This project provides an interactive Python script to train multiple YOLO (You O
   For each selected model and parameter combination, the script trains the model and prompts you to continue or stop.
 - **Export (Placeholder):**  
   The script includes a placeholder for exporting trained models to TFLite format. You can implement this using Ultralytics' export functionality if needed.
-
-## Customization
-
-- **Dataset Path:**  
-  Change `'data_custom.yaml'` in the script to your dataset YAML file if needed.
-- **Exporting Models:**  
-  To export to TFLite, add after training:
-  ```python
-  trained_model.export(format='tflite')
-  ```
-- **Additional Parameters:**  
-  Modify the `train_yolo_model` function to include more training options as needed.
-
-## Example
-
-```
-Choose YOLO models to train on:
-1. yolov8x.pt
-2. yolov8l.pt
-3. yolov8m.pt
-4. yolov8s.pt
-5. yolov8n.pt
-Enter the numbers separated by commas (e.g., 1, 3, 5): 2, 4
-Enter epochs separated by commas (e.g., 1, 2, 3): 50, 100
-Enter image sizes separated by commas (e.g., 416, 512, 608): 416, 512
-...
-```
-
-## Troubleshooting
-
-- **KMP_DUPLICATE_LIB_OK Error:**  
-  If you encounter errors related to `KMP_DUPLICATE_LIB_OK`, uncomment the following line at the top of the script:
-  ```python
-  os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
-  ```
-- **CUDA/Device Issues:**  
-  Ensure your environment is set up for GPU training if available.
 
 ## References
 
